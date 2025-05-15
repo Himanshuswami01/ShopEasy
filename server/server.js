@@ -24,6 +24,11 @@ app.use('/api/orders', authMiddleware, routes.orderRoutes);
 app.use('/api/users', authMiddleware, routes.userRoutes);
 app.use('/api/wishlist', authMiddleware, routes.wishlistRoutes);
 
+// Add a basic root route if missing
+app.get('/', (req, res) => {
+  res.send('Server is running ✅');
+});
+
 // Error handling
 app.use(errorHandler);
 
