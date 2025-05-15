@@ -1,4 +1,5 @@
-# Fashion Store E-commerce Website
+HEAD
+Fashion Store E-commerce Website
 
 A modern e-commerce platform for fashion products built with Node.js, Express, MongoDB, and React.
 
@@ -26,8 +27,8 @@ A modern e-commerce platform for fashion products built with Node.js, Express, M
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/fashion-store.git
-cd fashion-store
+git clone https://github.com/Himanshuswami01/ShopEasy.git
+cd ShopEasy
 ```
 
 2. Install dependencies:
@@ -103,4 +104,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Contact
 
 himanshu swami - himanshuswamiccc@gmail.com
-Project Link: https://github.com/Himanshuswami/fashion-store 
+Project Link: https://github.com/Himanshuswami01/ShopEasy.git
+
+# ShopEasy
+Clothing online web store
+ 6c8a64a724e7d49a4fb2dffdf6846aef8ee10fd1
