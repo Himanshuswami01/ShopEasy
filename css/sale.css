@@ -1,0 +1,66 @@
+.sale-banner {
+    background: linear-gradient(135deg, #ff4081 0%, #ff0000 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.sale-banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.sale-banner p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.product-card .discount-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff4081;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.product-card .original-price {
+    text-decoration: line-through;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.product-card .sale-price {
+    color: #ff4081;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Timer for flash sales */
+.flash-sale-timer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.timer-unit {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.timer-unit span {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.timer-unit small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+} 

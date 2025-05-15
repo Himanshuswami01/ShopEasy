@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management - Admin Dashboard</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/admin/users.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <h2>Admin Panel</h2>
+            </div>
+            <nav class="admin-nav">
+                <a href="dashboard.html">
+                    <i class="fas fa-th-large"></i> Dashboard
+                </a>
+                <a href="products.html">
+                    <i class="fas fa-tshirt"></i> Products
+                </a>
+                <a href="orders.html">
+                    <i class="fas fa-shopping-cart"></i> Orders
+                </a>
+                <a href="users.html" class="active">
+                    <i class="fas fa-users"></i> Users
+                </a>
+                <a href="analytics.html">
+                    <i class="fas fa-chart-bar"></i> Analytics
+                </a>
+                <a href="settings.html">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+            </nav>
+        </aside>
+
+        <main class="admin-main">
+            <div class="page-header">
+                <h1>User Management</h1>
+                <div class="header-actions">
+                    <button class="add-user-btn" onclick="userManager.openUserModal()">
+                        <i class="fas fa-user-plus"></i> Add New User
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-filters">
+                <div class="search-box">
+                    <input type="text" id="userSearch" placeholder="Search users...">
+                </div>
+                <div class="filter-group">
+                    <select id="roleFilter">
+                        <option value="">All Roles</option>
+                        <option value="customer">Customer</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                    <select id="statusFilter">
+                        <option value="">All Status</option>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                        <option value="blocked">Blocked</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="users-table-container">
+                <table class="users-table">
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                            <th>Joined Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Users will be loaded dynamically -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <!-- Pagination will be added dynamically -->
+            </div>
+        </main>
+    </div>
+
+    <!-- User Modal -->
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Add/Edit User</h2>
+            <form id="userForm">
+                <div class="form-group">
+                    <label for="userName">Full Name</label>
+                    <input type="text" id="userName" required>
+                </div>
+                <div class="form-group">
+                    <label for="userEmail">Email</label>
+                    <input type="email" id="userEmail" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="userRole">Role</label>
+                        <select id="userRole" required>
+                            <option value="customer">Customer</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="userStatus">Status</label>
+                        <select id="userStatus" required>
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                            <option value="blocked">Blocked</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn" onclick="userManager.closeUserModal()">Cancel</button>
+                    <button type="submit" class="save-btn">Save User</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="../../js/admin/users.js"></script>
+</body>
+</html> 

@@ -1,0 +1,116 @@
+/* Payment Management Styles */
+.payment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.payment-table th,
+.payment-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.payment-table th {
+    background: #f5f5f5;
+    font-weight: 600;
+}
+
+.status-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.status-badge.completed {
+    background: #e8f5e9;
+    color: #4caf50;
+}
+
+.status-badge.pending {
+    background: #fff3e0;
+    color: #ff9800;
+}
+
+.status-badge.failed {
+    background: #ffebee;
+    color: #f44336;
+}
+
+/* Payment Details Modal */
+.payment-details {
+    display: grid;
+    gap: 2rem;
+}
+
+.detail-section {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.detail-section h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: white;
+}
+
+.items-table th,
+.items-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.items-table th {
+    background: #f5f5f5;
+    font-weight: 600;
+}
+
+/* Transaction ID and Order ID styles */
+.transaction-id,
+.order-id {
+    font-family: monospace;
+    background: #f5f5f5;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Payment Method Icons */
+.payment-method {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.payment-method i {
+    font-size: 1.2rem;
+}
+
+.payment-method.credit-card i {
+    color: #2196f3;
+}
+
+.payment-method.paypal i {
+    color: #00457c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .payment-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .payment-details {
+        grid-template-columns: 1fr;
+    }
+} 

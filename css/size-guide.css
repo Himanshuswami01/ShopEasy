@@ -1,0 +1,126 @@
+.size-guide-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.size-guide-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.size-guide-header h1 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.size-guide-header p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+}
+
+/* Category Tabs */
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.tab-btn {
+    padding: 0.75rem 2rem;
+    border: none;
+    background: none;
+    border-bottom: 2px solid transparent;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+}
+
+/* Measurement Guide */
+.measurement-guide {
+    margin-bottom: 4rem;
+}
+
+.measurement-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.measurement-step {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.measurement-step img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+
+.measurement-step h3 {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+/* Size Charts */
+.size-chart {
+    display: none;
+    margin-top: 2rem;
+}
+
+.size-chart.active {
+    display: block;
+}
+
+.size-chart table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.size-chart th,
+.size-chart td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.size-chart th {
+    background: var(--accent-color);
+    color: white;
+    font-weight: 500;
+}
+
+.size-chart tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+    .category-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .measurement-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .size-chart {
+        overflow-x: auto;
+    }
+} 

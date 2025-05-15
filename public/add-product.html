@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product - Fashion Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .product-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .size-color-group {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .size-color-group input {
+            flex: 1;
+        }
+
+        .btn {
+            background: #007bff;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        .preview-image {
+            max-width: 200px;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-form">
+        <h2>Add New Product</h2>
+        <form id="addProductForm">
+            <div class="form-group">
+                <label for="name">Product Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="number" id="price" name="price" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select id="category" name="category" required>
+                    <option value="">Select Category</option>
+                    <option value="mens">Men's Wear</option>
+                    <option value="womens">Women's Wear</option>
+                    <option value="kids">Kids' Fashion</option>
+                    <option value="accessories">Accessories</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="image">Image URL</label>
+                <input type="url" id="image" name="image" required>
+                <img id="imagePreview" class="preview-image" style="display: none;">
+            </div>
+
+            <div class="form-group">
+                <label for="stock">Stock</label>
+                <input type="number" id="stock" name="stock" required>
+            </div>
+
+            <div class="form-group">
+                <label>Sizes</label>
+                <div id="sizesContainer">
+                    <div class="size-color-group">
+                        <input type="text" name="sizes[]" placeholder="Add size (e.g., S, M, L)">
+                        <button type="button" class="btn" onclick="addSizeField()">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Colors</label>
+                <div id="colorsContainer">
+                    <div class="size-color-group">
+                        <input type="text" name="colors[]" placeholder="Add color">
+                        <button type="button" class="btn" onclick="addColorField()">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Add Product</button>
+        </form>
+    </div>
+
+    <script>
+        // Preview image when URL is entered
+        document.getElementById('image').addEventListener('input', function(e) {
+            const preview = document.getElementById('imagePreview');
+            preview.src = e.target.value;
+            preview.style.display = e.target.value ? 'block' : 'none';
+        });
+
+        // Add new size field
+        function addSizeField() {
+            const container = document.getElementById('sizesContainer');
+            const newField = document.createElement('div');
+            newField.className = 'size-color-group';
+            newField.innerHTML = `
+                <input type="text" name="sizes[]" placeholder="Add size (e.g., S, M, L)">
+                <button type="button" class="btn" onclick="this.parentElement.remove()">-</button>
+            `;
+            container.appendChild(newField);
+        }
+
+        // Add new color field
+        function addColorField() {
+            const container = document.getElementById('colorsContainer');
+            const newField = document.createElement('div');
+            newField.className = 'size-color-group';
+            newField.innerHTML = `
+                <input type="text" name="colors[]" placeholder="Add color">
+                <button type="button" class="btn" onclick="this.parentElement.remove()">-</button>
+            `;
+            container.appendChild(newField);
+        }
+
+        // Handle form submission
+        document.getElementById('addProductForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value,
+                description: document.getElementById('description').value,
+                price: parseFloat(document.getElementById('price').value),
+                category: document.getElementById('category').value,
+                image: document.getElementById('image').value,
+                stock: parseInt(document.getElementById('stock').value),
+                sizes: Array.from(document.getElementsByName('sizes[]')).map(input => input.value).filter(Boolean),
+                colors: Array.from(document.getElementsByName('colors[]')).map(input => input.value).filter(Boolean)
+            };
+
+            try {
+                const response = await fetch('/api/products', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alert(result.message || 'Product added successfully!');
+                    this.reset();
+                    document.getElementById('imagePreview').style.display = 'none';
+                } else {
+                    alert(`Error: ${result.message || 'Failed to add product'}`);
+                    if (result.error) {
+                        console.error('Server error:', result.error);
+                    }
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error: Failed to communicate with the server. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html> 

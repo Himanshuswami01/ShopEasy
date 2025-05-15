@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Admin Dashboard</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/admin/settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <h2>Admin Panel</h2>
+            </div>
+            <nav class="admin-nav">
+                <a href="dashboard.html">
+                    <i class="fas fa-th-large"></i> Dashboard
+                </a>
+                <a href="products.html">
+                    <i class="fas fa-tshirt"></i> Products
+                </a>
+                <a href="orders.html">
+                    <i class="fas fa-shopping-cart"></i> Orders
+                </a>
+                <a href="users.html">
+                    <i class="fas fa-users"></i> Users
+                </a>
+                <a href="analytics.html">
+                    <i class="fas fa-chart-bar"></i> Analytics
+                </a>
+                <a href="settings.html" class="active">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+            </nav>
+        </aside>
+        <main class="admin-main">
+            <div class="page-header">
+                <h1>Settings</h1>
+            </div>
+
+            <div class="settings-container">
+                <div class="settings-nav">
+                    <button class="nav-item active" data-tab="general">
+                        <i class="fas fa-cog"></i> General
+                    </button>
+                    <button class="nav-item" data-tab="appearance">
+                        <i class="fas fa-paint-brush"></i> Appearance
+                    </button>
+                    <button class="nav-item" data-tab="email">
+                        <i class="fas fa-envelope"></i> Email
+                    </button>
+                    <button class="nav-item" data-tab="payment">
+                        <i class="fas fa-credit-card"></i> Payment
+                    </button>
+                    <button class="nav-item" data-tab="shipping">
+                        <i class="fas fa-truck"></i> Shipping
+                    </button>
+                    <button class="nav-item" data-tab="security">
+                        <i class="fas fa-shield-alt"></i> Security
+                    </button>
+                    <button class="nav-item" data-tab="integrations">
+                        <i class="fas fa-plug"></i> Integrations
+                    </button>
+                </div>
+
+                <div class="settings-content">
+                    <!-- General Settings -->
+                    <div class="settings-tab active" id="general">
+                        <h2>General Settings</h2>
+                        <form id="generalSettingsForm">
+                            <div class="form-group">
+                                <label>Store Name</label>
+                                <input type="text" name="storeName" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Store Email</label>
+                                <input type="email" name="storeEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Currency</label>
+                                <select name="currency">
+                                    <option value="USD">USD ($)</option>
+                                    <option value="EUR">EUR (€)</option>
+                                    <option value="GBP">GBP (£)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Timezone</label>
+                                <select name="timezone">
+                                    <!-- Timezones will be populated dynamically -->
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Appearance Settings -->
+                    <div class="settings-tab" id="appearance">
+                        <h2>Appearance Settings</h2>
+                        <form id="appearanceSettingsForm">
+                            <div class="form-group">
+                                <label>Theme</label>
+                                <select name="theme">
+                                    <option value="light">Light</option>
+                                    <option value="dark">Dark</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Logo</label>
+                                <div class="logo-upload">
+                                    <img id="logoPreview" src="" alt="Logo">
+                                    <input type="file" name="logo" accept="image/*">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Primary Color</label>
+                                <input type="color" name="primaryColor">
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Email Settings -->
+                    <div class="settings-tab" id="email">
+                        <h2>Email Settings</h2>
+                        <form id="emailSettingsForm">
+                            <div class="form-group">
+                                <label>SMTP Host</label>
+                                <input type="text" name="smtpHost">
+                            </div>
+                            <div class="form-group">
+                                <label>SMTP Port</label>
+                                <input type="number" name="smtpPort">
+                            </div>
+                            <div class="form-group">
+                                <label>SMTP Username</label>
+                                <input type="text" name="smtpUsername">
+                            </div>
+                            <div class="form-group">
+                                <label>SMTP Password</label>
+                                <input type="password" name="smtpPassword">
+                            </div>
+                            <button type="button" class="test-email-btn">
+                                Test Email Configuration
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Payment Settings -->
+                    <div class="settings-tab" id="payment">
+                        <h2>Payment Settings</h2>
+                        <form id="paymentSettingsForm">
+                            <div class="payment-method">
+                                <div class="method-header">
+                                    <h3>Stripe</h3>
+                                    <label class="switch">
+                                        <input type="checkbox" name="stripeEnabled">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                <div class="method-settings">
+                                    <div class="form-group">
+                                        <label>API Key</label>
+                                        <input type="text" name="stripeApiKey">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Secret Key</label>
+                                        <input type="password" name="stripeSecretKey">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="payment-method">
+                                <div class="method-header">
+                                    <h3>PayPal</h3>
+                                    <label class="switch">
+                                        <input type="checkbox" name="paypalEnabled">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                <div class="method-settings">
+                                    <div class="form-group">
+                                        <label>Client ID</label>
+                                        <input type="text" name="paypalClientId">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Secret</label>
+                                        <input type="password" name="paypalSecret">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Add other settings tabs here -->
+                </div>
+            </div>
+
+            <div class="settings-actions">
+                <button type="button" class="cancel-btn">Cancel</button>
+                <button type="button" class="save-btn" onclick="settingsManager.saveSettings()">
+                    Save Changes
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="../../js/admin/settings.js"></script>
+</body>
+</html> 

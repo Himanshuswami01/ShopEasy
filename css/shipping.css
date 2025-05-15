@@ -1,0 +1,158 @@
+.shipping-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.shipping-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.shipping-header h1 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.shipping-header p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+}
+
+/* Shipping Options */
+.shipping-options {
+    margin-bottom: 4rem;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.option-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.option-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.option-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.option-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.option-card .price {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.option-features {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.option-features li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.option-features li::before {
+    content: "✓";
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+}
+
+/* Delivery Map */
+.delivery-times {
+    margin-bottom: 4rem;
+}
+
+.delivery-map {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+}
+
+.delivery-map img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.zone-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.zone {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.zone-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.zone-1 { background: #4CAF50; }
+.zone-2 { background: #2196F3; }
+.zone-3 { background: #FFC107; }
+
+/* Shipping Policy */
+.shipping-policy {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.policy-content h3 {
+    color: var(--text-dark);
+    margin: 1.5rem 0 0.5rem;
+}
+
+.policy-content p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .options-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .zone-list {
+        grid-template-columns: 1fr;
+    }
+} 

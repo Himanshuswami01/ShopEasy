@@ -1,0 +1,98 @@
+.tracking-page {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.tracking-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.order-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-meta {
+    color: #666;
+}
+
+.tracking-status {
+    position: relative;
+    margin: 3rem 0;
+}
+
+.status-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.status-step:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 25px;
+    top: 40px;
+    bottom: 0;
+    width: 2px;
+    background-color: #ddd;
+}
+
+.step-icon {
+    width: 50px;
+    height: 50px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.status-step.completed .step-icon {
+    background: #4CAF50;
+    color: white;
+}
+
+.status-step.active .step-icon {
+    background: var(--accent-color);
+    color: var(--text-dark);
+}
+
+.step-info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.step-info p {
+    margin: 0.25rem 0 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.order-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #ddd;
+}
+
+.shipping-info address {
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .tracking-container {
+        padding: 1rem;
+    }
+} 

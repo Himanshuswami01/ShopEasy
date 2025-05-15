@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <a href="index.html">ShopEasy</a>
+            </div>
+            <div class="search-bar">
+                <select name="category" id="category">
+                    <option value="all">All Categories</option>
+                    <option value="mens">Men's Wear</option>
+                    <option value="womens">Women's Wear</option>
+                    <option value="kids">Kids' Fashion</option>
+                </select>
+                <input type="text" placeholder="Search for clothing...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-actions">
+                <div class="account">
+                    <a href="#" id="accountLink">
+                        <i class="fas fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                </div>
+                <div class="cart">
+                    <a href="pages/cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/new-arrivals.html" class="deals">New Arrivals</a></li>
+                <li><a href="pages/mens.html">Men's Fashion</a></li>
+                <li><a href="pages/womens.html">Women's Fashion</a></li>
+                <li><a href="pages/kids.html">Kids' Fashion</a></li>
+                <li><a href="pages/accessories.html">Accessories</a></li>
+                <li><a href="pages/sale.html">Sale</a></li>
+                <li><a href="#" id="accountLink">Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Featured Products Section First -->
+        <section class="featured-products">
+            <div class="products-grid">
+                <div class="product-card featured" style="max-width: 250px; ">
+                    <div class="product-image">
+                        <span class="featured-badge">Featured</span>
+                        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTR2MJjLiKlBoM2ENPM0sgEsnTbZRDO4I32SCBuw_DJNrywE02Ejq6E4nGCU19HRl2-1TNqmIqjRL98LJT1UNn4BZZuKStK5Q-W-a-UpWM075gHHIoRs0PfijKubrYSv9S0Ll3anSwIBw&usqp=CAc" >
+                    </div>
+                    <div class="product-info">
+                        <h3>The Souled Store Men's Solid Regular Fit Button Down Shirt</h3>
+                        <div class="product-meta">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(87)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹499</span>
+                                <span class="original-price">₹1000</span>
+                            </div>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-dot" style="background: #000000;" title="Black"></span>
+                            <span class="color-dot" style="background: #ffffff;" title="White"></span>
+                            <span class="color-dot" style="background: #808080;" title="Gray"></span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="quick-view-btn">
+                                <i class="fas fa-eye"></i>
+                                Quick View
+                            </button>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                                Add to Cart
+                            </button>
+                            <button class="buy-now-btn">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card featured" style="max-width: 250px;">
+                    <div class="product-image">
+                        <span class="featured-badge">Featured</span>
+                        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT3iQG_wasuc3wdulA6-YNJy2SI3nfmBN7fHiUuEqmDoNa7CGwkFQVWKVMemfMHKvfigPKIkQ1raJmCCWtnIXxaEPyDra5Nqku7JQt1qNWlSKtsIByX7_suz8NjMDN9e5gMqsLcsn5F4A&usqp=CAc" >
+                    </div>
+                    <div class="product-info">
+                        <h3>The Souled Store Solids: Brown Men and Boys Long Sleeve Collared Neck Button Front Regular Fit Utility Shirts</h3>
+                        <div class="product-meta">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(124)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹599</span>
+                                <span class="original-price">₹2000</span>
+                            </div>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-dot" style="background: #000080;" title="Navy"></span>
+                            <span class="color-dot" style="background: #4169e1;" title="Royal Blue"></span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="quick-view-btn">
+                                <i class="fas fa-eye"></i>
+                                Quick View
+                            </button>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                                Add to Cart
+                                
+                            </button>
+                            <button class="buy-now-btn">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card featured" style="max-width: 250px;">
+                    <div class="product-image">
+                        <span class="featured-badge">Featured</span>
+                        <img src="https://m.media-amazon.com/images/I/71DResmbgeL._SY879_.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>DEELMO Men's Casual Button Down Shirts Long Sleeve Linen Shirt Fashion Textured Beach Summer Shirt</h3>
+                        <div class="product-meta">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(92)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹600</span>
+                                <span class="original-price">₹1000</span>
+                            </div>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-dot" style="background: #ffb6c1;" title="Pink"></span>
+                            <span class="color-dot" style="background: #98fb98;" title="Mint"></span>
+                            <span class="color-dot" style="background: #87ceeb;" title="Sky Blue"></span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="quick-view-btn">
+                                <i class="fas fa-eye"></i>
+                                Quick View
+                            </button>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                                Add to Cart
+                            </button>
+                            <button class="buy-now-btn">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card featured" style="max-width: 250px;">
+                    <div class="product-image">
+                        <span class="featured-badge">Featured</span>
+                        <img src="https://m.media-amazon.com/images/I/615W1abrC2L._SY879_.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Leriya Fashion Textured Shirts for Men||Regular Fit Casual Shirt for Men||Fancy Shirt||Men Full Sleeve Shirt||Plain Shirts for Men</h3>
+                        <div class="product-meta">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(156)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹500</span>
+                                <span class="original-price">₹1000</span>
+                            </div>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-dot" style="background: #8b4513;" title="Brown"></span>
+                            <span class="color-dot" style="background: #000000;" title="Black"></span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="quick-view-btn">
+                                <i class="fas fa-eye"></i>
+                                Quick View
+                            </button>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                                Add to Cart
+                            </button>
+                            <button class="buy-now-btn">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://www.wearavele.com/cdn/shop/files/WhatsAppImage2025-02-09at1.37.46PM.jpg?v=1742909639" alt="Sneakers">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                            <button class="buy-now-btn">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Casual Oxford Button-Up Shirt with Embroidered Logo</h3>
+                        <p class="price">₹349</p>
+                        <div class="product-colors">
+                            <span class="color-dot" style="background: #ffffff;"></span>
+                            <span class="color-dot" style="background: #000000;"></span>
+                            <span class="color-dot" style="background: #ff0000;"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" style="max-width: 280px;">
+                    <div class="product-image">
+                        <img src="https://www.wearavele.com/cdn/shop/files/DLMSHS25250_BR_1.jpg?v=1743320984" alt="Winter Coat">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                            <button class="buy-now-btn">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Men Solid Spread Collar Full Sleeves Regular Fit Shirt</h3>
+                        <p class="price">₹300</p>
+                        <div class="product-colors">
+                            <span class="color-dot" style="background: #808080;"></span>
+                            <span class="color-dot" style="background: #000000;"></span>
+                            <span class="color-dot" style="background: #8b4513;"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" style="max-width: 280px;">
+                    <div class="product-image">
+                        <img src="https://www.wearavele.com/cdn/shop/files/DLMSHFKJAS002_GR_5.jpg?v=1743334399 ">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                            <button class="buy-now-btn">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Men's Grey Solid Button Down Collar Full Sleeves Shirt</h3>
+                        <p class="price">₹300</p>
+                        <div class="product-colors">
+                            <span class="color-dot" style="background: #808080;"></span>
+                            <span class="color-dot" style="background: #000000;"></span>
+                            <span class="color-dot" style="background: #8b4513;"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" style="max-width: 280px;">
+                    <div class="product-image">
+                        <img src="https://m.media-amazon.com/images/I/71DResmbgeL._SY879_.jpg" alt="Casual Shirt">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                            <button class="buy-now-btn">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Men's Casual Button Down Shirt</h3>
+                        <p class="price">₹450</p>
+                        <div class="product-colors">
+                            <span class="color-dot" style="background: #87ceeb;"></span>
+                            <span class="color-dot" style="background: #98fb98;"></span>
+                            <span class="color-dot" style="background: #ffb6c1;"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" style="max-width: 280px;">
+                    <div class="product-image">
+                        <img src="https://m.media-amazon.com/images/I/615W1abrC2L._SY879_.jpg" alt="Textured Shirt">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                            <button class="buy-now-btn">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Men's Textured Casual Shirt</h3>
+                        <p class="price">₹550</p>
+                        <div class="product-colors">
+                            <span class="color-dot" style="background: #8b4513;"></span>
+                            <span class="color-dot" style="background: #000000;"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" style="max-width: 280px;">
+                    <div class="product-image">
+                        <img src="https://m.media-amazon.com/images/I/81jTbBLCnJL._AC._SR360,460.jpg" alt="Sports Shoes">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                            <button class="buy-now-btn">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Men's Sports Trekking Shoes</h3>
+                        <p class="price">₹800</p>
+                        <div class="product-colors">
+                            <span class="color-dot" style="background: #000000;"></span>
+                            <span class="color-dot" style="background: #808080;"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" style="max-width: 280px;">
+                    <div class="product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKFdCVSGkdboWAYT51OmwN8bJZ4pwJs_eQ2A&s" alt="Smart Watch">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                            <button class="buy-now-btn">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Smart Watch with Health Monitor</h3>
+                        <p class="price">₹1200</p>
+                        <div class="product-colors">
+                            <span class="color-dot" style="background: #000000;"></span>
+                            <span class="color-dot" style="background: #c0c0c0;"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Arrivals Section -->
+        <section class="new-arrivals">
+            <h2>New Arrivals</h2>
+            <div class="products-grid">
+                <!-- Add similar product cards for new arrivals -->
+                <!-- You can copy and modify the above product cards -->
+            </div>
+        </section>
+
+        <!-- Featured Categories Section -->
+        <section class="featured-categories">
+            <h2>Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card mens">
+                    <img src="https://image.hm.com/assets/hm/d0/9b/d09bd78173ca58d139d1f9905e2662fc7804f7c8.jpg?imwidth=1260"style="width: 100%; height: 85%; object-fit: cover;" alt="Men's Fashion">
+                    <div class="category-content">
+                        <h3>Men's Fashion</h3>
+                        <a href="pages/mens.html" class="shop-now">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card womens">
+                    <img src="https://img.theloom.in/blog/wp-content/uploads/2022/07/gsfs16c-e1657372109399.png"style="width: 100%; height: 85%; object-fit: cover;" alt="Men's Fashion" alt="Women's Fashion">
+                    <div class="category-content">
+                        <h3>Women's Fashion</h3>
+                        <a href="pages/womens.html" class="shop-now">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card kids">
+                    <img src="https://images.pexels.com/photos/1619815/pexels-photo-1619815.jpeg?auto=compress&cs=tinysrgb&w=600"style="width: 100%; height: 85%; object-fit: cover;" alt="Men's Fashion" alt="Women's Fashion" alt="Kids' Fashion">
+                    <div class="category-content">
+                        <h3>Kids' Fashion</h3>
+                        <a href="pages/kids.html" class="shop-now">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add this section after the featured-categories section -->
+        <section class="trending-products">
+            <div class="section-header">
+                <h2>Trending Now</h2>
+                <p>Discover what's hot this season</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card trending">
+                    <div class="product-image">
+                        <span class="trending-badge">Trending</span>
+                        <img src="https://hips.hearstapps.com/hmg-prod/images/5-6616c28379b35.jpg?crop=0.492xw:0.984xh;0.253xw,0&resize=1200:*" alt="Trending Fashion">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>temerity Men's Crossbody Bags Men's USB Chest Bag Designer Messenger Bag PU Leather Shoulder Bags Diagonal Package Back Pack Travel (Brown)</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(128)</span>
+                        </div>
+                        <p class="price">₹899</p>
+                    </div>
+                </div>
+
+                <!-- Additional trending products -->
+                <div class="product-card trending">
+                    <div class="product-image">
+                        <span class="trending-badge">Trending</span>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKFdCVSGkdboWAYT51OmwN8bJZ4pwJs_eQ2A&s" alt="Smart Watch">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jual Jam Tangan Pria Merk Rolex Oyster Perpetual Cosmograph Daytona FullSet </h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(95)</span>
+                        </div>
+                        <p class="price">₹500</p>
+                    </div>
+                </div>
+
+                <div class="product-card trending">
+                    <div class="product-image">
+                        <span class="trending-badge">Trending</span>
+                        <img src="data:image/jpeg;base64,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" alt="Designer Sunglasses">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Buy Gold Berg Unisex Black Lens & Black Square Sunglasses with UV Protected Lens</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(76)</span>
+                        </div>
+                        <p class="price">₹200</p>
+                    </div>
+                </div>
+
+                <div class="product-card trending">
+                    <div class="product-image">
+                        <span class="trending-badge">Trending</span>
+                        <img src="https://m.media-amazon.com/images/I/81jTbBLCnJL._AC._SR360,460.jpg" alt="Running Shoes">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>ASIAN Men's Everest-21 Sports Trekking & Hiking,Walking Hi-Neck Shoes with Rubber Outsole & Memory Foam Insole Lace-Up Shoes for Men's & Boy's</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(142)</span>
+                        </div>
+                        <p class="price">₹600</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hero Section Moved to Bottom -->
+        <section class="hero-section">
+            <div class="hero-slider">
+                <div class="slider-container">
+                    <div class="slide active">
+                        <img src="https://i.pinimg.com/736x/c5/64/0a/c5640a3064e4de7c36a52ef3a4ea1eb4.jpg" alt="Fashion Collection">
+                        <div class="slide-content">
+                            <h2>Summer Collection 2024</h2>
+                            <p>Discover the latest trends in fashion</p>
+                            <a href="pages/new-arrivals.html" class="cta-button">Shop Now</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://img.freepik.com/free-photo/fashion-photo-young-beautiful-woman-with-shopping-bags_186202-7509.jpg" alt="Shopping Season">
+                        <div class="slide-content">
+                            <h2>Special Offers</h2>
+                            <p>Up to 50% off on selected items</p>
+                            <a href="pages/sale.html" class="cta-button">View Deals</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://img.freepik.com/free-photo/portrait-young-smiling-woman-looking-camera_23-2147965120.jpg" alt="New Arrivals">
+                        <div class="slide-content">
+                            <h2>New Arrivals</h2>
+                            <p>Check out our latest collection</p>
+                            <a href="pages/new-arrivals.html" class="cta-button">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                    <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+          
+
+            <div class="hero-features">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Free Shipping</h3>
+                            <p>On orders over ₹100</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-undo"></i>
+                        </div>
+                        <div class="feature-content">
+                            
+                            <h3>Easy Returns</h3>
+                            <p>30-day return policy</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>24/7 Support</h3>
+                            <p>Dedicated customer service</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Secure Shopping</h3>
+                            <p>100% secure payment</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-tag"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Special Discounts</h3>
+                            <p>Up to 50% off</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Quality Guarantee</h3>
+                            <p>Premium products</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your one-stop destination for fashion.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="pages/about.html">About Us</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                    <li><a href="pages/faq.html">FAQ</a></li>
+                    <li><a href="pages/shipping.html">Shipping Info</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="pages/returns.html">Returns</a></li>
+                    <li><a href="pages/size-guide.html">Size Guide</a></li>
+                    <li><a href="pages/track-order.html">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Fashion Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Load JavaScript files -->
+    <script src="js/cart.js"></script>
+    <script src="js/products.js"></script>
+    <script type="module" src="js/index.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fix account link functionality
+            const accountLinks = document.querySelectorAll('#accountLink');
+            accountLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const isAuthenticated = localStorage.getItem('authToken');
+                    if (isAuthenticated) {
+                        window.location.href = 'pages/account.html';
+                    } else {
+                        window.location.href = 'pages/login.html';
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            const prevBtn = document.querySelector('.prev-slide');
+            const nextBtn = document.querySelector('.next-slide');
+            let currentSlide = 0;
+
+            function showSlide(n) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+                
+                currentSlide = (n + slides.length) % slides.length;
+                
+                slides[currentSlide].classList.add('active');
+                dots[currentSlide].classList.add('active');
+            }
+
+            function nextSlide() {
+                showSlide(currentSlide + 1);
+            }
+
+            function prevSlide() {
+                showSlide(currentSlide - 1);
+            }
+
+            // Event listeners
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => showSlide(index));
+            });
+
+            // Auto slide
+            setInterval(nextSlide, 5000);
+        });
+    </script>
+</body>
+</html>

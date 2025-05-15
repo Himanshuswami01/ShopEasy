@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Cotton Shirt - Fashion Store</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/product-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- Same header as account.html -->
+    </header>
+
+    <main class="product-detail-page">
+        <div class="product-container">
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img src="../images/products/shirt-1.jpg" alt="Classic Cotton Shirt" id="main-product-image">
+                </div>
+                <div class="thumbnail-images">
+                    <img src="../images/products/shirt-1.jpg" alt="Front view" class="thumbnail active">
+                    <img src="../images/products/shirt-2.jpg" alt="Back view" class="thumbnail">
+                    <img src="../images/products/shirt-3.jpg" alt="Detail view" class="thumbnail">
+                    <img src="../images/products/shirt-4.jpg" alt="Styled view" class="thumbnail">
+                </div>
+            </div>
+
+            <div class="product-info">
+                <div class="product-header">
+                    <h1>Classic Cotton Shirt</h1>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-count">(128 Reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">₹49.99</span>
+                        <span class="original-price">₹69.99</span>
+                        <span class="discount">-28%</span>
+                    </div>
+                </div>
+
+                <div class="product-options">
+                    <div class="color-options">
+                        <h3>Color</h3>
+                        <div class="color-selector">
+                            <button class="color-btn active" style="background-color: #ffffff;" data-color="White"></button>
+                            <button class="color-btn" style="background-color: #87CEEB;" data-color="Sky Blue"></button>
+                            <button class="color-btn" style="background-color: #FFB6C1;" data-color="Pink"></button>
+                        </div>
+                    </div>
+
+                    <div class="size-options">
+                        <div class="size-header">
+                            <h3>Size</h3>
+                            <button class="size-guide-btn" onclick="openSizeGuide()">Size Guide</button>
+                        </div>
+                        <div class="size-selector">
+                            <button class="size-btn">XS</button>
+                            <button class="size-btn">S</button>
+                            <button class="size-btn active">M</button>
+                            <button class="size-btn">L</button>
+                            <button class="size-btn">XL</button>
+                            <button class="size-btn">XXL</button>
+                        </div>
+                    </div>
+
+                    <div class="quantity-selector">
+                        <h3>Quantity</h3>
+                        <div class="quantity-controls">
+                            <button class="qty-btn" onclick="decrementQuantity()">-</button>
+                            <input type="number" value="1" min="1" max="10" id="quantity">
+                            <button class="qty-btn" onclick="incrementQuantity()">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                </div>
+
+                <div class="product-details">
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="description">Description</button>
+                        <button class="tab-btn" data-tab="fabric">Fabric & Care</button>
+                        <button class="tab-btn" data-tab="delivery">Delivery</button>
+                    </div>
+
+                    <div class="tab-content active" id="description">
+                        <p>A timeless classic cotton shirt perfect for any occasion. Features a regular fit with clean lines and premium cotton fabric.</p>
+                        <ul>
+                            <li>Regular fit</li>
+                            <li>Button-down collar</li>
+                            <li>Long sleeves with buttoned cuffs</li>
+                            <li>100% premium cotton</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content" id="fabric">
+                        <div class="fabric-details">
+                            <h4>Fabric Composition</h4>
+                            <ul>
+                                <li>100% Cotton</li>
+                                <li>160 GSM weight</li>
+                                <li>Breathable weave</li>
+                            </ul>
+                            <h4>Care Instructions</h4>
+                            <div class="care-icons">
+                                <span title="Machine wash cold"><i class="fas fa-tshirt"></i></span>
+                                <span title="Do not bleach"><i class="fas fa-ban"></i></span>
+                                <span title="Iron medium heat"><i class="fas fa-iron"></i></span>
+                                <span title="Dry flat"><i class="fas fa-square"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="delivery">
+                        <p>Free standard delivery for orders over ₹50</p>
+                        <ul>
+                            <li>Standard Delivery (3-5 working days): ₹4.99</li>
+                            <li>Express Delivery (1-2 working days): ₹9.99</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Size Guide Modal -->
+        <div id="sizeGuideModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Size Guide</h2>
+                <table class="size-chart">
+                    <thead>
+                        <tr>
+                            <th>Size</th>
+                            <th>Chest (inches)</th>
+                            <th>Waist (inches)</th>
+                            <th>Length (inches)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>XS</td>
+                            <td>34-36</td>
+                            <td>28-30</td>
+                            <td>26</td>
+                        </tr>
+                        <!-- Add more size rows -->
+                    </tbody>
+                </table>
+                <div class="measurement-guide">
+                    <h3>How to Measure</h3>
+                    <img src="../images/size-guide.png" alt="Measurement guide">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+
+    <script src="../js/product-detail.js"></script>
+</body>
+</html> 

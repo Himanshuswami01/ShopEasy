@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard - Admin</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/admin/analytics.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <h2>Admin Panel</h2>
+            </div>
+            <nav class="admin-nav">
+                <a href="dashboard.html">
+                    <i class="fas fa-th-large"></i> Dashboard
+                </a>
+                <a href="products.html">
+                    <i class="fas fa-tshirt"></i> Products
+                </a>
+                <a href="orders.html">
+                    <i class="fas fa-shopping-cart"></i> Orders
+                </a>
+                <a href="users.html">
+                    <i class="fas fa-users"></i> Users
+                </a>
+                <a href="analytics.html" class="active">
+                    <i class="fas fa-chart-bar"></i> Analytics
+                </a>
+                <a href="settings.html">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+            </nav>
+        </aside>
+        <main class="admin-main">
+            <div class="page-header">
+                <h1>Analytics Dashboard</h1>
+                <div class="date-range-picker">
+                    <input type="date" id="startDate">
+                    <span>to</span>
+                    <input type="date" id="endDate">
+                    <button class="apply-btn" onclick="analyticsDashboard.updateDateRange()">
+                        Apply
+                    </button>
+                </div>
+                <div class="period-filter">
+                    <select id="periodFilter">
+                        <option value="day">Daily</option>
+                        <option value="month" selected>Monthly</option>
+                        <option value="year">Yearly</option>
+                        <option value="custom">Custom Range</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="periodComparison" class="period-comparison">
+                <!-- Comparison metrics will be loaded here -->
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon sales">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>Total Sales</h3>
+                        <p class="metric-value" id="totalSales">₹0</p>
+                        <span class="metric-change positive" id="salesChange">+0%</span>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon orders">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>Total Orders</h3>
+                        <p class="metric-value" id="totalOrders">0</p>
+                        <span class="metric-change" id="ordersChange">0%</span>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon users">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>New Users</h3>
+                        <p class="metric-value" id="newUsers">0</p>
+                        <span class="metric-change positive" id="usersChange">+0%</span>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon conversion">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>Conversion Rate</h3>
+                        <p class="metric-value" id="conversionRate">0%</p>
+                        <span class="metric-change" id="conversionChange">0%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <h3>Sales Overview</h3>
+                    <canvas id="salesChart"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Top Products</h3>
+                    <canvas id="productsChart"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <h3>User Demographics</h3>
+                    <canvas id="demographicsChart"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Traffic Sources</h3>
+                    <canvas id="trafficChart"></canvas>
+                </div>
+            </div>
+
+            <div class="analytics-tables">
+                <div class="table-card">
+                    <h3>Recent Orders</h3>
+                    <div class="table-container">
+                        <table id="recentOrdersTable">
+                            <!-- Table content will be loaded dynamically -->
+                        </table>
+                    </div>
+                </div>
+
+                <div class="table-card">
+                    <h3>Top Customers</h3>
+                    <div class="table-container">
+                        <table id="topCustomersTable">
+                            <!-- Table content will be loaded dynamically -->
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="../../js/admin/analytics.js"></script>
+</body>
+</html> 

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories - Fashion Store</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Include header -->
+    <div id="header-container"></div>
+
+    <main class="category-page">
+        <div class="category-container">
+            <aside class="filters">
+                <h2>Filters</h2>
+                <div class="filter-section">
+                    <h3>Categories</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="bags"> Bags & Backpacks</label>
+                        <label><input type="checkbox" value="jewelry"> Jewelry</label>
+                        <label><input type="checkbox" value="watches"> Watches</label>
+                        <label><input type="checkbox" value="sunglasses"> Sunglasses</label>
+                        <label><input type="checkbox" value="belts"> Belts</label>
+                        <label><input type="checkbox" value="wallets"> Wallets</label>
+                        <label><input type="checkbox" value="scarves"> Scarves</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Price Range</h3>
+                    <div class="price-range">
+                        <input type="range" min="0" max="10000" value="5000" class="price-slider">
+                        <div class="price-inputs">
+                            <input type="number" placeholder="Min" value="0">
+                            <span>-</span>
+                            <input type="number" placeholder="Max" value="10000">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Brand</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="gucci"> Gucci</label>
+                        <label><input type="checkbox" value="prada"> Prada</label>
+                        <label><input type="checkbox" value="mk"> Michael Kors</label>
+                        <label><input type="checkbox" value="fossil"> Fossil</label>
+                        <label><input type="checkbox" value="titan"> Titan</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Material</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="leather"> Leather</label>
+                        <label><input type="checkbox" value="metal"> Metal</label>
+                        <label><input type="checkbox" value="plastic"> Plastic</label>
+                        <label><input type="checkbox" value="fabric"> Fabric</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Color</h3>
+                    <div class="color-options">
+                        <span class="color-dot" style="background: #000000;" title="Black"></span>
+                        <span class="color-dot" style="background: #ffffff;" title="White"></span>
+                        <span class="color-dot" style="background: #ff0000;" title="Red"></span>
+                        <span class="color-dot" style="background: #0000ff;" title="Blue"></span>
+                        <span class="color-dot" style="background: #ffd700;" title="Gold"></span>
+                        <span class="color-dot" style="background: #c0c0c0;" title="Silver"></span>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Discount</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="10"> 10% & Above</label>
+                        <label><input type="checkbox" value="20"> 20% & Above</label>
+                        <label><input type="checkbox" value="30"> 30% & Above</label>
+                        <label><input type="checkbox" value="40"> 40% & Above</label>
+                        <label><input type="checkbox" value="50"> 50% & Above</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Availability</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="in-stock"> In Stock</label>
+                        <label><input type="checkbox" value="express-delivery"> Express Delivery</label>
+                        <label><input type="checkbox" value="same-day"> Same Day Delivery</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Customer Rating</h3>
+                    <div class="filter-options rating-options">
+                        <label><input type="radio" name="rating" value="4"> 4★ & Above</label>
+                        <label><input type="radio" name="rating" value="3"> 3★ & Above</label>
+                        <label><input type="radio" name="rating" value="2"> 2★ & Above</label>
+                        <label><input type="radio" name="rating" value="1"> 1★ & Above</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Features</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="waterproof"> Waterproof</label>
+                        <label><input type="checkbox" value="antiallergic"> Anti-Allergic</label>
+                        <label><input type="checkbox" value="sustainable"> Sustainable</label>
+                        <label><input type="checkbox" value="handmade"> Handmade</label>
+                    </div>
+                </div>
+
+                <div class="filter-actions">
+                    <button class="apply-filters">Apply Filters</button>
+                    <button class="clear-filters">Clear All</button>
+                </div>
+            </aside>
+
+            <section class="products-section">
+                <div class="products-header">
+                    <h1>Accessories</h1>
+                    <div class="products-controls">
+                        <select class="sort-select">
+                            <option value="newest">Newest First</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="popular">Most Popular</option>
+                            <option value="discount">Highest Discount</option>
+                        </select>
+                        <div class="view-options">
+                            <button class="grid-view active"><i class="fas fa-th"></i></button>
+                            <button class="list-view"><i class="fas fa-list"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/71DResmbgeL._SY879_.jpg" alt="Designer Handbag">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Designer Leather Handbag</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(128)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹2499</span>
+                                <span class="original-price">₹4999</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/61+Q6Rh3OEL._UY879_.jpg" alt="Gold Necklace">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Gold Plated Necklace Set</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(95)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹899</span>
+                                <span class="original-price">₹1799</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/71DResmbgeL._SY879_.jpg" alt="Smart Watch">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Smart Fitness Watch</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(156)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹2999</span>
+                                <span class="original-price">₹5999</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/71DResmbgeL._SY879_.jpg" alt="Designer Sunglasses">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Designer Sunglasses</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(78)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹1299</span>
+                                <span class="original-price">₹2499</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/61+Q6Rh3OEL._UY879_.jpg" alt="Leather Belt">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Genuine Leather Belt</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(92)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹599</span>
+                                <span class="original-price">₹999</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/71DResmbgeL._SY879_.jpg" alt="Backpack">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Premium Laptop Backpack</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(65)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹1499</span>
+                                <span class="original-price">₹2999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Include footer -->
+    <div id="footer-container"></div>
+
+    <script>
+        // Load header and footer
+        fetch('../components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        fetch('../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+    <script src="../js/category.js"></script>
+</body>
+</html> 

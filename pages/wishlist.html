@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wishlist - Fashion Store</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/wishlist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- Same header -->
+    </header>
+
+    <main class="wishlist-page">
+        <div class="wishlist-container">
+            <h1>My Wishlist</h1>
+            <div class="wishlist-grid">
+                <!-- Items will be loaded dynamically -->
+            </div>
+            <aside class="filters">
+                <h2>Filters</h2>
+                <div class="filter-section">
+                    <h3>Categories</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="womens"> Women's Fashion</label>
+                        <label><input type="checkbox" value="mens"> Men's Fashion</label>
+                        <label><input type="checkbox" value="kids"> Kids' Fashion</label>
+                        <label><input type="checkbox" value="accessories"> Accessories</label>
+                        <label><input type="checkbox" value="footwear"> Footwear</label>
+                        <label><input type="checkbox" value="bags"> Bags & Backpacks</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Price Range</h3>
+                    <div class="price-range">
+                        <input type="range" min="0" max="20000" value="10000" class="price-slider">
+                        <div class="price-inputs">
+                            <input type="number" placeholder="Min" value="0">
+                            <span>-</span>
+                            <input type="number" placeholder="Max" value="20000">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Brand</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="zara"> Zara</label>
+                        <label><input type="checkbox" value="hm"> H&M</label>
+                        <label><input type="checkbox" value="nike"> Nike</label>
+                        <label><input type="checkbox" value="adidas"> Adidas</label>
+                        <label><input type="checkbox" value="puma"> Puma</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Added Date</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="last24h"> Last 24 Hours</label>
+                        <label><input type="checkbox" value="last7d"> Last 7 Days</label>
+                        <label><input type="checkbox" value="last30d"> Last 30 Days</label>
+                        <label><input type="checkbox" value="last90d"> Last 90 Days</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Color</h3>
+                    <div class="color-options">
+                        <span class="color-dot" style="background: #000000;" title="Black"></span>
+                        <span class="color-dot" style="background: #ffffff;" title="White"></span>
+                        <span class="color-dot" style="background: #ff0000;" title="Red"></span>
+                        <span class="color-dot" style="background: #0000ff;" title="Blue"></span>
+                        <span class="color-dot" style="background: #008000;" title="Green"></span>
+                        <span class="color-dot" style="background: #ffff00;" title="Yellow"></span>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Rating</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="4"> 4★ & Above</label>
+                        <label><input type="checkbox" value="3"> 3★ & Above</label>
+                        <label><input type="checkbox" value="2"> 2★ & Above</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Style</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="casual"> Casual</label>
+                        <label><input type="checkbox" value="formal"> Formal</label>
+                        <label><input type="checkbox" value="party"> Party</label>
+                        <label><input type="checkbox" value="ethnic"> Ethnic</label>
+                        <label><input type="checkbox" value="sports"> Sports</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Pattern</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="solid"> Solid</label>
+                        <label><input type="checkbox" value="printed"> Printed</label>
+                        <label><input type="checkbox" value="striped"> Striped</label>
+                        <label><input type="checkbox" value="floral"> Floral</label>
+                        <label><input type="checkbox" value="geometric"> Geometric</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Fabric</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="cotton"> Cotton</label>
+                        <label><input type="checkbox" value="silk"> Silk</label>
+                        <label><input type="checkbox" value="denim"> Denim</label>
+                        <label><input type="checkbox" value="polyester"> Polyester</label>
+                        <label><input type="checkbox" value="wool"> Wool</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Availability</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="in-stock"> In Stock</label>
+                        <label><input type="checkbox" value="express-delivery"> Express Delivery</label>
+                        <label><input type="checkbox" value="same-day"> Same Day Delivery</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Features</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="sustainable"> Sustainable</label>
+                        <label><input type="checkbox" value="handmade"> Handmade</label>
+                        <label><input type="checkbox" value="limited-edition"> Limited Edition</label>
+                        <label><input type="checkbox" value="trending"> Trending</label>
+                    </div>
+                </div>
+
+                <div class="filter-actions">
+                    <button class="apply-filters">Apply Filters</button>
+                    <button class="clear-filters">Clear All</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+
+    <script type="module" src="../js/wishlist.js"></script>
+</body>
+</html> 

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - ShopEasy</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <a href="../index.html">ShopEasy</a>
+            </div>
+            <div class="search-bar">
+                <select name="category" id="category">
+                    <option value="all">All Categories</option>
+                    <option value="mens">Men's Wear</option>
+                    <option value="womens">Women's Wear</option>
+                    <option value="kids">Kids' Fashion</option>
+                </select>
+                <input type="text" placeholder="Search for clothing...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-actions">
+                <div class="account">
+                    <a href="account.html">
+                        <i class="fas fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                </div>
+                <div class="cart">
+                    <a href="cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#" class="deals">New Arrivals</a></li>
+                <li><a href="mens.html">Men's Fashion</a></li>
+                <li><a href="womens.html">Women's Fashion</a></li>
+                <li><a href="kids.html">Kids' Fashion</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="sale.html">Sale</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="account-page">
+        <div class="account-container">
+            <aside class="account-nav">
+                <div class="user-info">
+                    <i class="fas fa-user-circle"></i>
+                    <div class="user-details">
+                        <h3>Himanshu Swami</h3>
+                        <p>Himanshuswami@gmail.com</p>
+                    </div>
+                </div>
+                <nav>
+                    <a href="#" class="active"><i class="fas fa-th-large"></i> Dashboard</a>
+                    <a href="orders.html"><i class="fas fa-shopping-bag"></i> My Orders</a>
+                    <a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a>
+                    <a href="measurements.html"><i class="fas fa-ruler"></i> My Measurements</a>
+                    <a href="addresses.html"><i class="fas fa-map-marker-alt"></i> Addresses</a>
+                    <a href="settings.html"><i class="fas fa-cog"></i> Account Settings</a>
+                    <a href="#" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </nav>
+            </aside>
+
+            <div class="account-content">
+                <section class="dashboard-summary">
+                    <div class="summary-card">
+                        <i class="fas fa-tshirt"></i>
+                        <div class="card-info">
+                            <h3>Recent Orders</h3>
+                            <p>2 orders in progress</p>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <i class="fas fa-ruler"></i>
+                        <div class="card-info">
+                            <h3>Size Profile</h3>
+                            <p>Last updated: 2 months ago</p>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <i class="fas fa-tag"></i>
+                        <div class="card-info">
+                            <h3>Style Points</h3>
+                            <p>250 points available</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="points-dashboard">
+                    <div class="points-header">
+                        <div class="points-info">
+                            <h2>Your Points</h2>
+                            <div class="points-status">
+                                <span class="points-balance">0</span>
+                                <span class="points-label">points</span>
+                            </div>
+                            <div class="tier-status">
+                                <span class="tier-label">Current Tier:</span>
+                                <span class="user-tier">BRONZE</span>
+                            </div>
+                        </div>
+                        <div class="tier-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                            <div class="tier-levels">
+                                <span>BRONZE</span>
+                                <span>SILVER</span>
+                                <span>GOLD</span>
+                                <span>PLATINUM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="points-benefits">
+                        <h3>Your Benefits</h3>
+                        <div class="benefits-grid">
+                            <div class="benefit-card">
+                                <i class="fas fa-gift"></i>
+                                <h4>Birthday Bonus</h4>
+                                <p>Get 150 points on your birthday</p>
+                            </div>
+                            <div class="benefit-card">
+                                <i class="fas fa-percent"></i>
+                                <h4>Special Discounts</h4>
+                                <p>Exclusive discounts based on your tier</p>
+                            </div>
+                            <div class="benefit-card">
+                                <i class="fas fa-truck"></i>
+                                <h4>Free Shipping</h4>
+                                <p>Free shipping on orders over ₹50</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="points-history">
+                        <h3>Points History</h3>
+                        <!-- Points transactions will be loaded dynamically -->
+                    </div>
+                </section>
+
+                <section class="recent-orders">
+                    <h2>Recent Orders</h2>
+                    <div class="orders-list">
+                        <!-- Orders will be loaded dynamically -->
+                    </div>
+                    <a href="orders.html" class="view-all">View All Orders</a>
+                </section>
+
+                <section class="style-recommendations">
+                    <h2>Recommended for You</h2>
+                    <div class="recommendations-header">
+                        <div class="tier-info">
+                            <span class="user-tier"></span>
+                            <p class="tier-message">Unlock more personalized recommendations by upgrading your tier!</p>
+                        </div>
+                        <button class="try-on-btn" onclick="startVirtualTryOn()">
+                            <i class="fas fa-camera"></i> Virtual Try-On
+                        </button>
+                    </div>
+                    
+                    <div class="recommendations-container">
+                        <div class="perfect-matches">
+                            <h3>Perfect for You</h3>
+                            <div class="recommendations-grid">
+                                <!-- Perfect matches will be loaded here -->
+                            </div>
+                        </div>
+                        
+                        <div class="good-matches">
+                            <h3>Good Matches</h3>
+                            <div class="recommendations-grid">
+                                <!-- Good matches will be loaded here -->
+                            </div>
+                        </div>
+                        
+                        <div class="not-recommended">
+                            <h3>May Not Suit You</h3>
+                            <p class="premium-message">Unlock detailed style insights with Premium</p>
+                            <div class="recommendations-grid blur-effect">
+                                <!-- Non-matches will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Virtual Try-On Modal -->
+                    <div id="tryOnModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2>Virtual Try-On</h2>
+                            <div class="try-on-container">
+                                <video id="tryOnVideo" autoplay playsinline></video>
+                                <div class="clothing-overlay"></div>
+                                <div class="fit-analysis">
+                                    <!-- Fit analysis will be shown here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+
+    <script src="../js/account.js"></script>
+</body>
+</html> 

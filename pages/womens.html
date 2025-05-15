@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Fashion - Fashion Store</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Include header -->
+    <div id="header-container"></div>
+
+    <!-- After header-container, before main -->
+    <div class="breadcrumb-container">
+        <nav class="breadcrumb">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li class="separator"><i class="fas fa-chevron-right"></i></li>
+                <li class="current">Women's Fashion</li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="category-page">
+        <div class="category-container">
+            <aside class="filters">
+                <h2>Filters</h2>
+                <div class="filter-section">
+                    <h3>Categories</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="dresses"> Dresses</label>
+                        <label><input type="checkbox" value="tops"> Tops & T-Shirts</label>
+                        <label><input type="checkbox" value="pants"> Pants & Jeans</label>
+                        <label><input type="checkbox" value="skirts"> Skirts</label>
+                        <label><input type="checkbox" value="outerwear"> Outerwear</label>
+                        <label><input type="checkbox" value="activewear"> Activewear</label>
+                        <label><input type="checkbox" value="swimwear"> Swimwear</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Price Range</h3>
+                    <div class="price-range">
+                        <input type="range" min="0" max="10000" value="5000" class="price-slider">
+                        <div class="price-inputs">
+                            <input type="number" placeholder="Min" value="0">
+                            <span>-</span>
+                            <input type="number" placeholder="Max" value="10000">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Brand</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="zara"> Zara</label>
+                        <label><input type="checkbox" value="h&m"> H&M</label>
+                        <label><input type="checkbox" value="forever21"> Forever 21</label>
+                        <label><input type="checkbox" value="levis"> Levi's</label>
+                        <label><input type="checkbox" value="nike"> Nike</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Size</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="xs"> XS</label>
+                        <label><input type="checkbox" value="s"> S</label>
+                        <label><input type="checkbox" value="m"> M</label>
+                        <label><input type="checkbox" value="l"> L</label>
+                        <label><input type="checkbox" value="xl"> XL</label>
+                        <label><input type="checkbox" value="xxl"> XXL</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Color</h3>
+                    <div class="color-options">
+                        <span class="color-dot" style="background: #000000;" title="Black"></span>
+                        <span class="color-dot" style="background: #ffffff;" title="White"></span>
+                        <span class="color-dot" style="background: #ff0000;" title="Red"></span>
+                        <span class="color-dot" style="background: #0000ff;" title="Blue"></span>
+                        <span class="color-dot" style="background: #ff69b4;" title="Pink"></span>
+                        <span class="color-dot" style="background: #800080;" title="Purple"></span>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Discount</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="10"> 10% & Above</label>
+                        <label><input type="checkbox" value="20"> 20% & Above</label>
+                        <label><input type="checkbox" value="30"> 30% & Above</label>
+                        <label><input type="checkbox" value="40"> 40% & Above</label>
+                        <label><input type="checkbox" value="50"> 50% & Above</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Style</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="casual"> Casual</label>
+                        <label><input type="checkbox" value="formal"> Formal</label>
+                        <label><input type="checkbox" value="party"> Party</label>
+                        <label><input type="checkbox" value="ethnic"> Ethnic</label>
+                        <label><input type="checkbox" value="sports"> Sports</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Pattern</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="solid"> Solid</label>
+                        <label><input type="checkbox" value="printed"> Printed</label>
+                        <label><input type="checkbox" value="striped"> Striped</label>
+                        <label><input type="checkbox" value="floral"> Floral</label>
+                        <label><input type="checkbox" value="geometric"> Geometric</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Fabric</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="cotton"> Cotton</label>
+                        <label><input type="checkbox" value="silk"> Silk</label>
+                        <label><input type="checkbox" value="denim"> Denim</label>
+                        <label><input type="checkbox" value="polyester"> Polyester</label>
+                        <label><input type="checkbox" value="wool"> Wool</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Occasion</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="daily"> Daily Wear</label>
+                        <label><input type="checkbox" value="office"> Office Wear</label>
+                        <label><input type="checkbox" value="party"> Party Wear</label>
+                        <label><input type="checkbox" value="wedding"> Wedding Wear</label>
+                        <label><input type="checkbox" value="festive"> Festive Wear</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Availability</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="in-stock"> In Stock</label>
+                        <label><input type="checkbox" value="express-delivery"> Express Delivery</label>
+                        <label><input type="checkbox" value="same-day"> Same Day Delivery</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Customer Rating</h3>
+                    <div class="filter-options rating-options">
+                        <label><input type="radio" name="rating" value="4"> 4★ & Above</label>
+                        <label><input type="radio" name="rating" value="3"> 3★ & Above</label>
+                        <label><input type="radio" name="rating" value="2"> 2★ & Above</label>
+                        <label><input type="radio" name="rating" value="1"> 1★ & Above</label>
+                    </div>
+                </div>
+
+                <div class="filter-actions">
+                    <button class="apply-filters">Apply Filters</button>
+                    <button class="clear-filters">Clear All</button>
+                </div>
+            </aside>
+
+            <section class="products-section">
+                <div class="products-header">
+                    <h1>Women's Fashion</h1>
+                    <div class="sort-filter">
+                        <select id="sortBy">
+                            <option value="newest">Newest</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/71DResmbgeL._SY879_.jpg" alt="Women's Dress">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Women's Floral Summer Dress</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(128)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹999</span>
+                                <span class="original-price">₹1999</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/61+Q6Rh3OEL._UY879_.jpg" alt="Women's Top">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Women's Casual Top</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(95)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹599</span>
+                                <span class="original-price">₹999</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/71DResmbgeL._SY879_.jpg" alt="Women's Jeans">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Women's Slim Fit Jeans</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(156)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹799</span>
+                                <span class="original-price">₹1499</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/71DResmbgeL._SY879_.jpg" alt="Women's Skirt">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Women's A-Line Skirt</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(78)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹699</span>
+                                <span class="original-price">₹1299</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/61+Q6Rh3OEL._UY879_.jpg" alt="Women's Jacket">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Women's Denim Jacket</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(92)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹1299</span>
+                                <span class="original-price">₹2499</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/71DResmbgeL._SY879_.jpg" alt="Women's Blouse">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Women's Silk Blouse</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(65)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹899</span>
+                                <span class="original-price">₹1799</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Include footer -->
+    <div id="footer-container"></div>
+
+    <script>
+        // Load header and footer
+        fetch('../components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        fetch('../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+    <script src="../js/category.js"></script>
+</body>
+</html> 

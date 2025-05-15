@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - ShopEasy</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="payment-header">
+            <h1>Payment Details</h1>
+            <div class="progress-bar">
+                <div class="step completed">Cart</div>
+                <div class="step completed">Shipping</div>
+                <div class="step active">Payment</div>
+                <div class="step">Confirmation</div>
+            </div>
+        </header>
+
+        <main class="payment-content">
+            <div class="payment-wrapper">
+                <!-- Payment Form Section -->
+                <section class="payment-form-section">
+                    <form id="payment-form" class="payment-form">
+                        <div class="payment-methods">
+                            <h2>Select Payment Method</h2>
+                            <div class="payment-method-options">
+                                <!-- Credit Cards -->
+                                <div class="payment-method credit-card">
+                                    <input type="radio" id="visa" name="payment-method" value="visa">
+                                    <div class="method-info">
+                                        <i class="fab fa-cc-visa"></i>
+                                        <span>Visa</span>
+                                    </div>
+                                </div>
+                                <div class="payment-method mastercard">
+                                    <input type="radio" id="mastercard" name="payment-method" value="mastercard">
+                                    <div class="method-info">
+                                        <i class="fab fa-cc-mastercard"></i>
+                                        <span>Mastercard</span>
+                                    </div>
+                                </div>
+                                <div class="payment-method amex">
+                                    <input type="radio" id="amex" name="payment-method" value="amex">
+                                    <div class="method-info">
+                                        <i class="fab fa-cc-amex"></i>
+                                        <span>American Express</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- UPI Apps -->
+                            <h2>UPI Payment</h2>
+                            <div class="upi-apps">
+                                <div class="upi-app">
+                                    <img src="images/phonepe.png" alt="PhonePe">
+                                    <span>PhonePe</span>
+                                </div>
+                                <div class="upi-app">
+                                    <img src="images/gpay.png" alt="Google Pay">
+                                    <span>Google Pay</span>
+                                </div>
+                                <div class="upi-app">
+                                    <img src="images/paytm.png" alt="Paytm">
+                                    <span>Paytm</span>
+                                </div>
+                                <div class="upi-app">
+                                    <img src="images/bhim.png" alt="BHIM">
+                                    <span>BHIM UPI</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-details">
+                            <div class="form-group">
+                                <label for="card-name">Name on Card</label>
+                                <input type="text" id="card-name" name="card-name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="card-number">Card Number</label>
+                                <input type="text" id="card-number" name="card-number" required pattern="\d{16}" maxlength="16">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group half">
+                                    <label for="expiry">Expiry Date</label>
+                                    <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required pattern="\d{2}/\d{2}">
+                                </div>
+                                <div class="form-group half">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" name="cvv" required pattern="\d{3,4}" maxlength="4">
+                                </div>
+                            </div>
+
+                            <div id="card-element">
+                                <!-- Stripe Card Element will be inserted here -->
+                            </div>
+                            <div id="card-errors" class="error-message"></div>
+                        </div>
+
+                        <div class="billing-address">
+                            <h2>Billing Address</h2>
+                            <div class="form-group">
+                                <label for="billing-address">Address</label>
+                                <input type="text" id="billing-address" name="address" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group half">
+                                    <label for="billing-city">City</label>
+                                    <input type="text" id="billing-city" name="city" required>
+                                </div>
+                                <div class="form-group half">
+                                    <label for="billing-state">State</label>
+                                    <input type="text" id="billing-state" name="state" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group half">
+                                    <label for="billing-postal">PIN Code</label>
+                                    <input type="text" id="billing-postal" name="postal_code" required pattern="\d{6}">
+                                </div>
+                                <div class="form-group half">
+                                    <label for="billing-country">Country</label>
+                                    <select id="billing-country" name="country" required>
+                                        <option value="IN">India</option>
+                                        <option value="US">United States</option>
+                                        <option value="GB">United Kingdom</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Order Summary Section -->
+                <section class="order-summary">
+                    <h2>Order Summary</h2>
+                    <div class="summary-details">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="subtotal">₹0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span id="shipping">₹0.00</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span id="total">₹0.00</span>
+                        </div>
+                    </div>
+                    <button type="submit" form="payment-form" class="btn-primary btn-pay">Pay Now</button>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/payment.js"></script>
+</body>
+</html> 

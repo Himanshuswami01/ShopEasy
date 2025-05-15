@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders - Fashion Store</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/orders.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- Same header -->
+    </header>
+
+    <main class="orders-page">
+        <div class="orders-container">
+            <h1>My Orders</h1>
+            <div class="order-filters">
+                <select id="orderStatus">
+                    <option value="all">All Orders</option>
+                    <option value="processing">Processing</option>
+                    <option value="shipped">Shipped</option>
+                    <option value="delivered">Delivered</option>
+                </select>
+                <input type="date" id="orderDate">
+            </div>
+            <div class="orders-list">
+                <!-- Orders will be loaded dynamically -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+
+    <script type="module" src="../js/orders.js"></script>
+</body>
+</html> 

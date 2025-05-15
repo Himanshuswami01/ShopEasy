@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size Guide - Fashion Store</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/size-guide.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- Same header as index.html -->
+    </header>
+
+    <main class="size-guide-page">
+        <div class="size-guide-header">
+            <h1>Size Guide</h1>
+            <p>Find your perfect fit</p>
+        </div>
+
+        <div class="size-guide-container">
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="womens">Women's</button>
+                <button class="tab-btn" data-category="mens">Men's</button>
+                <button class="tab-btn" data-category="kids">Kids'</button>
+            </div>
+
+            <div class="measurement-guide">
+                <h2>How to Measure</h2>
+                <div class="measurement-steps">
+                    <div class="measurement-step">
+                        <img src="../images/measure-chest.png" alt="Chest measurement">
+                        <h3>Chest</h3>
+                        <p>Measure around the fullest part of your chest, keeping the tape horizontal.</p>
+                    </div>
+                    <div class="measurement-step">
+                        <img src="../images/measure-waist.png" alt="Waist measurement">
+                        <h3>Waist</h3>
+                        <p>Measure around your natural waistline, keeping the tape comfortably loose.</p>
+                    </div>
+                    <div class="measurement-step">
+                        <img src="../images/measure-hips.png" alt="Hips measurement">
+                        <h3>Hips</h3>
+                        <p>Measure around the fullest part of your hips.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="size-charts">
+                <div class="size-chart active" id="womens-chart">
+                    <h2>Women's Size Chart</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Size</th>
+                                <th>Bust (cm)</th>
+                                <th>Waist (cm)</th>
+                                <th>Hips (cm)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>XS</td>
+                                <td>82-85</td>
+                                <td>64-67</td>
+                                <td>88-91</td>
+                            </tr>
+                            <!-- Add more sizes -->
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Similar charts for men's and kids' sizes -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="../js/size-guide.js"></script>
+</body>
+</html> 

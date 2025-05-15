@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Fashion - Fashion Store</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .category-container {
+            display: flex;
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .filters {
+            width: 280px;
+            flex-shrink: 0;
+            position: sticky;
+            top: 2rem;
+            height: fit-content;
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .products-section {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .filter-section {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .filter-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .filter-section h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .price-range {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .price-inputs {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .price-inputs input {
+            width: 100px;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .size-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .size-btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: #fff;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .size-btn:hover {
+            background: #f5f5f5;
+        }
+
+        .size-btn.active {
+            background: #007bff;
+            color: #fff;
+            border-color: #007bff;
+        }
+
+        .color-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .color-dot {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            transition: transform 0.2s;
+        }
+
+        .color-dot:hover {
+            transform: scale(1.1);
+        }
+
+        .filter-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .filter-actions button {
+            flex: 1;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .clear-filters {
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        .apply-filters {
+            background: #007bff;
+            color: #fff;
+        }
+
+        .clear-filters:hover {
+            background: #eee;
+        }
+
+        .apply-filters:hover {
+            background: #0056b3;
+        }
+
+        .apply-price {
+            padding: 0.5rem 1rem;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .apply-price:hover {
+            background: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .category-container {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .filters {
+                width: 100%;
+                position: static;
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Include header -->
+    <div id="header-container"></div>
+
+    <!-- After header-container, before main -->
+    <div class="breadcrumb-container">
+        <nav class="breadcrumb">
+            <ul>
+                <li><a href="../index.html"></a></li>
+               
+            </ul>
+        </nav>
+    </div>
+
+    <main class="category-page">
+        <div class="category-container">
+            <aside class="filters">
+                <h2>Filters</h2>
+                <div class="filter-section">
+                    <h3>Categories</h3>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="category" value="shirts"> Shirts & T-Shirts</label>
+                        <label><input type="checkbox" name="category" value="pants"> Pants & Jeans</label>
+                        <label><input type="checkbox" name="category" value="suits"> Suits & Blazers</label>
+                        <label><input type="checkbox" name="category" value="jackets"> Jackets & Coats</label>
+                        <label><input type="checkbox" name="category" value="activewear"> Activewear</label>
+                        <label><input type="checkbox" name="category" value="accessories"> Accessories</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Price Range</h3>
+                    <div class="price-range">
+                        <div class="price-inputs">
+                            <input type="number" placeholder="Min" min="0" max="10000">
+                            <span>-</span>
+                            <input type="number" placeholder="Max" min="0" max="10000">
+                        </div>
+                        <button class="apply-price">Apply</button>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Size</h3>
+                    <div class="size-options">
+                        <button class="size-btn">XS</button>
+                        <button class="size-btn">S</button>
+                        <button class="size-btn">M</button>
+                        <button class="size-btn">L</button>
+                        <button class="size-btn">XL</button>
+                        <button class="size-btn">XXL</button>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Brand</h3>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="brand" value="nike"> Nike</label>
+                        <label><input type="checkbox" name="brand" value="adidas"> Adidas</label>
+                        <label><input type="checkbox" name="brand" value="puma"> Puma</label>
+                        <label><input type="checkbox" name="brand" value="levis"> Levi's</label>
+                        <label><input type="checkbox" name="brand" value="tommy"> Tommy Hilfiger</label>
+                        <label><input type="checkbox" name="brand" value="calvin"> Calvin Klein</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Color</h3>
+                    <div class="color-options">
+                        <span class="color-dot" style="background: #000000;" title="Black"></span>
+                        <span class="color-dot" style="background: #ffffff;" title="White"></span>
+                        <span class="color-dot" style="background: #ff0000;" title="Red"></span>
+                        <span class="color-dot" style="background: #0000ff;" title="Blue"></span>
+                        <span class="color-dot" style="background: #008000;" title="Green"></span>
+                        <span class="color-dot" style="background: #ffff00;" title="Yellow"></span>
+                        <span class="color-dot" style="background: #808080;" title="Gray"></span>
+                        <span class="color-dot" style="background: #800080;" title="Purple"></span>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Discount</h3>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="discount" value="10"> 10% and above</label>
+                        <label><input type="checkbox" name="discount" value="20"> 20% and above</label>
+                        <label><input type="checkbox" name="discount" value="30"> 30% and above</label>
+                        <label><input type="checkbox" name="discount" value="40"> 40% and above</label>
+                        <label><input type="checkbox" name="discount" value="50"> 50% and above</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Customer Rating</h3>
+                    <div class="rating-options">
+                        <label><input type="checkbox" name="rating" value="4"> 4★ & above</label>
+                        <label><input type="checkbox" name="rating" value="3"> 3★ & above</label>
+                        <label><input type="checkbox" name="rating" value="2"> 2★ & above</label>
+                        <label><input type="checkbox" name="rating" value="1"> 1★ & above</label>
+                    </div>
+                </div>
+
+                <div class="filter-actions">
+                    <button class="clear-filters">Clear All</button>
+                    <button class="apply-filters">Apply Filters</button>
+                </div>
+            </aside>
+
+            <section class="products-section">
+                <div class="category-header">
+                    <h1>Men's Fashion</h1>
+                    <div class="sort-options">
+                        <label for="sort">Sort by:</label>
+                        <select id="sort">
+                            <option value="newest">Newest Arrivals</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="popular">Most Popular</option>
+                            <option value="rating">Customer Rating</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/71DResmbgeL._SY879_.jpg" alt="Men's Casual Shirt">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Men's Casual Button Down Shirt</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(92)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹600</span>
+                                <span class="original-price">₹1000</span>
+                            </div>
+                            <div class="product-colors">
+                                <span class="color-dot" style="background: #ffb6c1;" title="Pink"></span>
+                                <span class="color-dot" style="background: #98fb98;" title="Mint"></span>
+                                <span class="color-dot" style="background: #87ceeb;" title="Sky Blue"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/81jTbBLCnJL._AC._SR360,460.jpg" alt="Men's Sports Shoes">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>ASIAN Men's Everest-21 Sports Shoes</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(142)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹600</span>
+                                <span class="original-price">₹1200</span>
+                            </div>
+                            <div class="product-colors">
+                                <span class="color-dot" style="background: #000000;" title="Black"></span>
+                                <span class="color-dot" style="background: #808080;" title="Gray"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/71DResmbgeL._SY879_.jpg" alt="Men's Formal Shirt">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Men's Formal Business Shirt</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(78)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹800</span>
+                                <span class="original-price">₹1500</span>
+                            </div>
+                            <div class="product-colors">
+                                <span class="color-dot" style="background: #ffffff;" title="White"></span>
+                                <span class="color-dot" style="background: #000080;" title="Navy"></span>
+                                <span class="color-dot" style="background: #808080;" title="Gray"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/71DResmbgeL._SY879_.jpg" alt="Men's Denim Jacket">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Men's Classic Denim Jacket</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(56)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹1200</span>
+                                <span class="original-price">₹2000</span>
+                            </div>
+                            <div class="product-colors">
+                                <span class="color-dot" style="background: #000080;" title="Navy"></span>
+                                <span class="color-dot" style="background: #8b4513;" title="Brown"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/71DResmbgeL._SY879_.jpg" alt="Men's Slim Fit Jeans">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Men's Slim Fit Stretch Jeans</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(89)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹900</span>
+                                <span class="original-price">₹1800</span>
+                            </div>
+                            <div class="product-colors">
+                                <span class="color-dot" style="background: #000080;" title="Navy"></span>
+                                <span class="color-dot" style="background: #000000;" title="Black"></span>
+                                <span class="color-dot" style="background: #8b4513;" title="Brown"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/71DResmbgeL._SY879_.jpg" alt="Men's Polo T-Shirt">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Men's Classic Polo T-Shirt</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(112)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹400</span>
+                                <span class="original-price">₹800</span>
+                            </div>
+                            <div class="product-colors">
+                                <span class="color-dot" style="background: #ff0000;" title="Red"></span>
+                                <span class="color-dot" style="background: #000080;" title="Navy"></span>
+                                <span class="color-dot" style="background: #ffffff;" title="White"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <!-- Pagination controls -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Include footer -->
+    <div id="footer-container"></div>
+
+    <script>
+        // Load header and footer
+        fetch('../components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        fetch('../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+    <script src="../js/category.js"></script>
+</body>
+</html> 

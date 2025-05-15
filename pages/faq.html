@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Fashion Store</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/faq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- Same header as index.html -->
+    </header>
+
+    <main class="faq-page">
+        <div class="faq-header">
+            <h1>Frequently Asked Questions</h1>
+            <div class="faq-search">
+                <input type="text" placeholder="Search FAQ...">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-categories">
+                <button class="category-btn active" data-category="orders">Orders & Shipping</button>
+                <button class="category-btn" data-category="returns">Returns & Refunds</button>
+                <button class="category-btn" data-category="products">Products & Sizing</button>
+                <button class="category-btn" data-category="account">Account & Payment</button>
+                <button class="category-btn" data-category="international">International</button>
+                <button class="category-btn" data-category="care">Product Care</button>
+            </div>
+
+            <div class="faq-content">
+                <!-- Orders & Shipping Section -->
+                <div class="faq-section active" id="orders">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How can I track my order?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Once your order ships, you'll receive a tracking number via email. You can also track your order by logging into your account and viewing your order history.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What are your shipping options?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer several shipping options:</p>
+                            <ul>
+                                <li>Standard Shipping (3-5 business days)</li>
+                                <li>Express Shipping (1-2 business days)</li>
+                                <li>International Shipping (7-14 business days)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Returns & Refunds Section -->
+                <div class="faq-section" id="returns">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What is your return policy?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer a 30-day return policy for most items. Items must be unworn and in original condition with tags attached.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How long do refunds take to process?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Refunds typically process within 5-7 business days after we receive your return.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Products & Sizing Section -->
+                <div class="faq-section" id="products">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I find my size?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Check our size guide for detailed measurements. Each product page also includes specific sizing information.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Are your products sustainable?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We are committed to sustainability and use eco-friendly materials whenever possible. Look for our "Eco-Friendly" badge on products.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Account & Payment Section -->
+                <div class="faq-section" id="account">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What payment methods do you accept?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We accept all major credit cards, PayPal, and Apple Pay. All transactions are secure and encrypted.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I reset my password?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Click the "Forgot Password" link on the login page and follow the instructions sent to your email.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- International Section -->
+                <div class="faq-section" id="international">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Which countries do you ship to?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We ship to over 100 countries worldwide. Check our shipping page for the complete list and delivery times.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Do I have to pay customs fees?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Customs fees vary by country and are the responsibility of the customer. Please check your local customs regulations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Care Section -->
+                <div class="faq-section" id="care">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How should I wash my garments?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Always check the care label on each garment. Most items can be machine washed cold, but some require special care or dry cleaning.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How can I maintain the quality of my clothes?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>To maintain quality:</p>
+                            <ul>
+                                <li>Follow care label instructions</li>
+                                <li>Wash similar colors together</li>
+                                <li>Use gentle detergents</li>
+                                <li>Avoid excessive heat when drying</li>
+                                <li>Store items properly</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-support">
+                <h2>Still have questions?</h2>
+                <p>Our customer service team is here to help!</p>
+                <div class="support-buttons">
+                    <a href="contact.html" class="contact-btn">Contact Us</a>
+                    <a href="#" class="chat-btn">Live Chat</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="../js/faq.js"></script>
+</body>
+</html> 

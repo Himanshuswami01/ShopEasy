@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids' Fashion - Fashion Store</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Include header -->
+    <div id="header-container"></div>
+
+    <!-- After header-container, before main -->
+    <div class="breadcrumb-container">
+        <nav class="breadcrumb">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li class="separator"><i class="fas fa-chevron-right"></i></li>
+                <li class="current">Kids' Fashion</li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="category-page">
+        <div class="category-container">
+            <aside class="filters">
+                <h2>Filters</h2>
+                <div class="filter-section">
+                    <h3>Categories</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="tops"> Tops & T-Shirts</label>
+                        <label><input type="checkbox" value="pants"> Pants & Jeans</label>
+                        <label><input type="checkbox" value="dresses"> Dresses</label>
+                        <label><input type="checkbox" value="outerwear"> Outerwear</label>
+                        <label><input type="checkbox" value="shoes"> Shoes</label>
+                        <label><input type="checkbox" value="accessories"> Accessories</label>
+                        <label><input type="checkbox" value="sets"> Clothing Sets</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Price Range</h3>
+                    <div class="price-range">
+                        <input type="range" min="0" max="5000" value="2500" class="price-slider">
+                        <div class="price-inputs">
+                            <input type="number" placeholder="Min" value="0">
+                            <span>-</span>
+                            <input type="number" placeholder="Max" value="5000">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Brand</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="carters"> Carter's</label>
+                        <label><input type="checkbox" value="gap"> Gap Kids</label>
+                        <label><input type="checkbox" value="hm"> H&M Kids</label>
+                        <label><input type="checkbox" value="zara"> Zara Kids</label>
+                        <label><input type="checkbox" value="nike"> Nike Kids</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Age Group</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="0-12m"> 0-12 Months</label>
+                        <label><input type="checkbox" value="1-2y"> 1-2 Years</label>
+                        <label><input type="checkbox" value="3-4y"> 3-4 Years</label>
+                        <label><input type="checkbox" value="5-6y"> 5-6 Years</label>
+                        <label><input type="checkbox" value="7-8y"> 7-8 Years</label>
+                        <label><input type="checkbox" value="9-12y"> 9-12 Years</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Color</h3>
+                    <div class="color-options">
+                        <span class="color-dot" style="background: #000000;" title="Black"></span>
+                        <span class="color-dot" style="background: #ffffff;" title="White"></span>
+                        <span class="color-dot" style="background: #ff0000;" title="Red"></span>
+                        <span class="color-dot" style="background: #0000ff;" title="Blue"></span>
+                        <span class="color-dot" style="background: #ff69b4;" title="Pink"></span>
+                        <span class="color-dot" style="background: #ffff00;" title="Yellow"></span>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Discount</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="10"> 10% & Above</label>
+                        <label><input type="checkbox" value="20"> 20% & Above</label>
+                        <label><input type="checkbox" value="30"> 30% & Above</label>
+                        <label><input type="checkbox" value="40"> 40% & Above</label>
+                        <label><input type="checkbox" value="50"> 50% & Above</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Style</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="casual"> Casual</label>
+                        <label><input type="checkbox" value="formal"> Formal</label>
+                        <label><input type="checkbox" value="party"> Party</label>
+                        <label><input type="checkbox" value="school"> School Wear</label>
+                        <label><input type="checkbox" value="sports"> Sports</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Pattern</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="solid"> Solid</label>
+                        <label><input type="checkbox" value="printed"> Printed</label>
+                        <label><input type="checkbox" value="cartoon"> Cartoon</label>
+                        <label><input type="checkbox" value="character"> Character</label>
+                        <label><input type="checkbox" value="geometric"> Geometric</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Fabric</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="cotton"> Cotton</label>
+                        <label><input type="checkbox" value="denim"> Denim</label>
+                        <label><input type="checkbox" value="polyester"> Polyester</label>
+                        <label><input type="checkbox" value="fleece"> Fleece</label>
+                        <label><input type="checkbox" value="knit"> Knit</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Season</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="summer"> Summer</label>
+                        <label><input type="checkbox" value="winter"> Winter</label>
+                        <label><input type="checkbox" value="monsoon"> Monsoon</label>
+                        <label><input type="checkbox" value="all-season"> All Season</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Availability</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="in-stock"> In Stock</label>
+                        <label><input type="checkbox" value="express-delivery"> Express Delivery</label>
+                        <label><input type="checkbox" value="same-day"> Same Day Delivery</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Customer Rating</h3>
+                    <div class="filter-options rating-options">
+                        <label><input type="radio" name="rating" value="4"> 4★ & Above</label>
+                        <label><input type="radio" name="rating" value="3"> 3★ & Above</label>
+                        <label><input type="radio" name="rating" value="2"> 2★ & Above</label>
+                        <label><input type="radio" name="rating" value="1"> 1★ & Above</label>
+                    </div>
+                </div>
+
+                <div class="filter-actions">
+                    <button class="apply-filters">Apply Filters</button>
+                    <button class="clear-filters">Clear All</button>
+                </div>
+            </aside>
+
+            <section class="products-section">
+                <div class="products-header">
+                    <h1>Kids' Fashion</h1>
+                    <!-- Sort options -->
+                </div>
+
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/71DResmbgeL._SY879_.jpg" alt="Kids' T-Shirt">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Kids' Cartoon Print T-Shirt</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(89)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹399</span>
+                                <span class="original-price">₹699</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/61+Q6Rh3OEL._UY879_.jpg" alt="Kids' Jeans">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Kids' Denim Jeans</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(112)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹499</span>
+                                <span class="original-price">₹899</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/71DResmbgeL._SY879_.jpg" alt="Kids' Dress">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Kids' Party Dress</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(76)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹699</span>
+                                <span class="original-price">₹1299</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/71DResmbgeL._SY879_.jpg" alt="Kids' Hoodie">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Kids' Cartoon Hoodie</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(103)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹599</span>
+                                <span class="original-price">₹999</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/61+Q6Rh3OEL._UY879_.jpg" alt="Kids' Shoes">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Kids' Light-up Sneakers</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(87)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹799</span>
+                                <span class="original-price">₹1499</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://m.media-amazon.com/images/I/71DResmbgeL._SY879_.jpg" alt="Kids' Shorts">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Kids' Denim Shorts</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(94)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">₹449</span>
+                                <span class="original-price">₹799</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Include footer -->
+    <div id="footer-container"></div>
+
+    <script>
+        // Load header and footer
+        fetch('../components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        fetch('../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+    <script src="../js/category.js"></script>
+</body>
+</html> 

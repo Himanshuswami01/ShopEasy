@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Addresses - Fashion Store</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/addresses.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- Same header -->
+    </header>
+
+    <main class="addresses-page">
+        <div class="addresses-container">
+            <div class="addresses-header">
+                <h1>My Addresses</h1>
+                <button class="add-address-btn" onclick="openAddressModal()">
+                    <i class="fas fa-plus"></i> Add New Address
+                </button>
+            </div>
+            <div class="addresses-grid">
+                <!-- Addresses will be loaded dynamically -->
+            </div>
+        </div>
+
+        <!-- Address Modal -->
+        <div id="addressModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Add New Address</h2>
+                <form id="addressForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="street">Street Address</label>
+                        <input type="text" id="street" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State</label>
+                            <input type="text" id="state" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="zipCode">ZIP Code</label>
+                            <input type="text" id="zipCode" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <select id="country" required>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <!-- Add more countries -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="defaultAddress">
+                        <label for="defaultAddress">Set as default address</label>
+                    </div>
+                    <button type="submit" class="save-btn">Save Address</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+
+    <script type="module" src="../js/addresses.js"></script>
+</body>
+</html> 

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Order - ShopEasy</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/tracking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- Same header as index.html with updated paths -->
+    </header>
+
+    <main class="tracking-page">
+        <div class="tracking-container">
+            <div class="order-header">
+                <h1>Track Order</h1>
+                <div class="order-meta">
+                    <p>Order #12345678</p>
+                    <p>Placed on March 20, 2024</p>
+                </div>
+            </div>
+
+            <div class="tracking-status">
+                <div class="status-step completed">
+                    <div class="step-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="step-info">
+                        <h3>Order Placed</h3>
+                        <p>March 20, 2024 10:30 AM</p>
+                    </div>
+                </div>
+                <div class="status-step completed">
+                    <div class="step-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <div class="step-info">
+                        <h3>Order Packed</h3>
+                        <p>March 21, 2024 2:15 PM</p>
+                    </div>
+                </div>
+                <div class="status-step active">
+                    <div class="step-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <div class="step-info">
+                        <h3>In Transit</h3>
+                        <p>March 22, 2024 9:45 AM</p>
+                    </div>
+                </div>
+                <div class="status-step">
+                    <div class="step-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="step-info">
+                        <h3>Delivered</h3>
+                        <p>Expected by March 25, 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-details">
+                <div class="shipping-info">
+                    <h2>Shipping Details</h2>
+                    <address>
+                        John Doe<br>
+                        123 Main Street<br>
+                        Anytown, ST 12345<br>
+                        United States
+                    </address>
+                </div>
+                <div class="order-items">
+                    <h2>Order Items</h2>
+                    <!-- Items will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="../js/tracking.js"></script>
+</body>
+</html> 

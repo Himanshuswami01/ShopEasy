@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed - ShopEasy</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/confirmation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <a href="../index.html">ShopEasy</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="confirmation-page">
+        <div class="confirmation-container">
+            <div class="success-message">
+                <i class="fas fa-check-circle"></i>
+                <h1>Order Confirmed!</h1>
+                <p>Thank you for your purchase. Your order has been successfully placed.</p>
+                <div class="order-info">
+                    <p>Order Number: <strong>#12345678</strong></p>
+                    <p>A confirmation email has been sent to: <strong>user@example.com</strong></p>
+                </div>
+            </div>
+
+            <div class="order-details">
+                <h2>Order Details</h2>
+                <div class="order-items">
+                    <!-- Order items will be loaded dynamically -->
+                </div>
+                <div class="delivery-info">
+                    <h3>Delivery Information</h3>
+                    <p><strong>Estimated Delivery:</strong> March 25-27, 2024</p>
+                    <address>
+                        <strong>Shipping Address:</strong><br>
+                        John Doe<br>
+                        123 Main Street<br>
+                        Anytown, ST 12345<br>
+                        United States
+                    </address>
+                </div>
+            </div>
+
+            <div class="next-steps">
+                <a href="../pages/track-order.html" class="track-order-btn">
+                    <i class="fas fa-truck"></i>
+                    Track Order
+                </a>
+                <a href="../index.html" class="continue-shopping-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    Continue Shopping
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/confirmation.js"></script>
+</body>
+</html> 

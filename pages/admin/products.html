@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management - Admin Dashboard</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/admin/products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <h2>Admin Panel</h2>
+            </div>
+            <nav class="admin-nav">
+                <a href="dashboard.html">
+                    <i class="fas fa-th-large"></i> Dashboard
+                </a>
+                <a href="products.html" class="active">
+                    <i class="fas fa-tshirt"></i> Products
+                </a>
+                <a href="orders.html">
+                    <i class="fas fa-shopping-cart"></i> Orders
+                </a>
+                <a href="users.html">
+                    <i class="fas fa-users"></i> Users
+                </a>
+                <a href="analytics.html">
+                    <i class="fas fa-chart-bar"></i> Analytics
+                </a>
+                <a href="settings.html">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+            </nav>
+        </aside>
+        <main class="admin-main">
+            <div class="page-header">
+                <h1>Product Management</h1>
+                <button class="add-product-btn">
+                    <i class="fas fa-plus"></i> Add New Product
+                </button>
+            </div>
+
+            <div class="product-filters">
+                <div class="search-box">
+                    <input type="text" id="productSearch" placeholder="Search products...">
+                </div>
+                <div class="filter-group">
+                    <select id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <!-- Categories will be loaded dynamically -->
+                    </select>
+                    <select id="statusFilter">
+                        <option value="">All Status</option>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                        <option value="out_of_stock">Out of Stock</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="product-grid">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Product</h2>
+            <form id="productForm">
+                <div class="form-group">
+                    <label for="productName">Product Name</label>
+                    <input type="text" id="productName" required>
+                </div>
+                <div class="form-group">
+                    <label for="productSlug">URL Slug</label>
+                    <input type="text" id="productSlug" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="productPrice">Price</label>
+                        <input type="number" id="productPrice" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productSalePrice">Sale Price</label>
+                        <input type="number" id="productSalePrice" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label for="productStock">Stock</label>
+                        <input type="number" id="productStock" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="productSKU">SKU</label>
+                        <input type="text" id="productSKU" required readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="productBarcode">Barcode</label>
+                        <input type="text" id="productBarcode" readonly>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="productCategory">Category</label>
+                    <select id="productCategory" required>
+                        <option value="">Select Category</option>
+                        <!-- Categories will be loaded dynamically -->
+                        <option value="add_new">+ Add New Category</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="productTags">Tags</label>
+                    <input type="text" id="productTags" placeholder="Enter tags separated by commas">
+                </div>
+                <div class="form-group">
+                    <label for="productDescription">Description</label>
+                    <textarea id="productDescription" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="productSpecs">Specifications</label>
+                    <div id="specsContainer">
+                        <div class="spec-row">
+                            <input type="text" placeholder="Spec name" class="spec-name">
+                            <input type="text" placeholder="Spec value" class="spec-value">
+                            <button type="button" class="remove-spec"><i class="fas fa-times"></i></button>
+                        </div>
+                    </div>
+                    <button type="button" class="add-spec-btn">Add Specification</button>
+                </div>
+                <div class="form-group">
+                    <label for="productImages">Images</label>
+                    <input type="file" id="productImages" multiple accept="image/*">
+                    <div class="image-preview"></div>
+                </div>
+                <div class="form-group">
+                    <label>Product Status</label>
+                    <div class="status-options">
+                        <label class="status-option">
+                            <input type="radio" name="productStatus" value="active" checked>
+                            <span>Active</span>
+                        </label>
+                        <label class="status-option">
+                            <input type="radio" name="productStatus" value="draft">
+                            <span>Draft</span>
+                        </label>
+                        <label class="status-option">
+                            <input type="radio" name="productStatus" value="archived">
+                            <span>Archived</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn" onclick="closeProductModal()">Cancel</button>
+                    <button type="submit" class="save-btn">Save Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="../../js/admin/products.js"></script>
+</body>
+</html> 

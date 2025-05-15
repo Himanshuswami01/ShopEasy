@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Fashion Store</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <h2>Admin Panel</h2>
+            </div>
+            <nav class="admin-nav">
+                <a href="dashboard.html" class="active">
+                    <i class="fas fa-th-large"></i> Dashboard
+                </a>
+                <a href="products.html">
+                    <i class="fas fa-tshirt"></i> Products
+                </a>
+                <a href="orders.html">
+                    <i class="fas fa-shopping-cart"></i> Orders
+                </a>
+                <a href="users.html">
+                    <i class="fas fa-users"></i> Users
+                </a>
+                <a href="analytics.html">
+                    <i class="fas fa-chart-bar"></i> Analytics
+                </a>
+                <a href="settings.html">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+            </nav>
+        </aside>
+
+        <main class="admin-main">
+            <header class="admin-header">
+                <div class="admin-search">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="admin-user">
+                    <span>Admin</span>
+                    <img src="../../images/admin-avatar.png" alt="Admin">
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <h3>Total Sales</h3>
+                        <p class="stat-value">₹24,500</p>
+                        <span class="stat-change positive">+15%</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Orders</h3>
+                        <p class="stat-value">156</p>
+                        <span class="stat-change positive">+8%</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Users</h3>
+                        <p class="stat-value">2,450</p>
+                        <span class="stat-change positive">+12%</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Products</h3>
+                        <p class="stat-value">1,250</p>
+                        <span class="stat-change neutral">0%</span>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <!-- Recent activity will be loaded here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="../../js/admin/dashboard.js"></script>
+</body>
+</html> 

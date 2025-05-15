@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management - Admin Dashboard</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/admin/orders.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <h2>Admin Panel</h2>
+            </div>
+            <nav class="admin-nav">
+                <a href="dashboard.html">
+                    <i class="fas fa-th-large"></i> Dashboard
+                </a>
+                <a href="products.html">
+                    <i class="fas fa-tshirt"></i> Products
+                </a>
+                <a href="orders.html" class="active">
+                    <i class="fas fa-shopping-cart"></i> Orders
+                </a>
+                <a href="users.html">
+                    <i class="fas fa-users"></i> Users
+                </a>
+                <a href="analytics.html">
+                    <i class="fas fa-chart-bar"></i> Analytics
+                </a>
+                <a href="settings.html">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+            </nav>
+        </aside>
+        <main class="admin-main">
+            <div class="page-header">
+                <h1>Order Management</h1>
+                <div class="header-actions">
+                    <button class="export-btn" onclick="orderManager.exportOrders()">
+                        <i class="fas fa-download"></i> Export Orders
+                    </button>
+                </div>
+            </div>
+
+            <div class="order-filters">
+                <div class="search-box">
+                    <input type="text" id="orderSearch" placeholder="Search orders...">
+                </div>
+                <div class="filter-group">
+                    <select id="statusFilter">
+                        <option value="">All Status</option>
+                        <option value="pending">Pending</option>
+                        <option value="processing">Processing</option>
+                        <option value="shipped">Shipped</option>
+                        <option value="delivered">Delivered</option>
+                        <option value="cancelled">Cancelled</option>
+                    </select>
+                    <input type="date" id="dateFilter" placeholder="Filter by date">
+                </div>
+            </div>
+
+            <div class="orders-table-container">
+                <table class="orders-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Date</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                            <th>Payment</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Orders will be loaded dynamically -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <!-- Pagination will be added dynamically -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Order Details Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="order-details">
+                <!-- Order details will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../../js/admin/orders.js"></script>
+</body>
+</html> 

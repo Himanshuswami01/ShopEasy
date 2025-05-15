@@ -1,0 +1,205 @@
+/* Main Admin Layout */
+:root {
+    --primary-color: #2196f3;
+    --success-color: #4caf50;
+    --warning-color: #ff9800;
+    --danger-color: #f44336;
+    --text-dark: #333;
+    --text-light: #666;
+    --border-color: #eee;
+}
+
+/* Common Components */
+.action-btn {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    opacity: 0.8;
+}
+
+.view-btn { background: var(--primary-color); }
+.edit-btn { background: #2196F3; }
+.delete-btn { background: var(--danger-color); }
+.process-btn { background: var(--success-color); }
+
+.action-btn i {
+    color: white;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.status-badge.completed { background: #e8f5e9; color: var(--success-color); }
+.status-badge.pending { background: #fff3e0; color: var(--warning-color); }
+.status-badge.failed { background: #ffebee; color: var(--danger-color); }
+.status-badge.refunded { background: #e3f2fd; color: var(--primary-color); }
+
+/* Forms */
+.admin-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);
+}
+
+/* Tables */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.admin-table th {
+    background: #f5f5f5;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.admin-table tbody tr:hover {
+    background: #f9f9f9;
+}
+
+/* Modals */
+.admin-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-light);
+}
+
+/* Alerts and Notifications */
+.admin-alert {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1000;
+    animation: slideIn 0.3s ease;
+}
+
+.admin-alert.success { border-left: 4px solid var(--success-color); }
+.admin-alert.warning { border-left: 4px solid var(--warning-color); }
+.admin-alert.error { border-left: 4px solid var(--danger-color); }
+
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .admin-layout {
+        grid-template-columns: 200px 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-sidebar {
+        position: fixed;
+        left: -250px;
+        top: 0;
+        height: 100%;
+        z-index: 1000;
+        transition: left 0.3s ease;
+    }
+
+    .admin-sidebar.active {
+        left: 0;
+    }
+
+    .modal-content {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .admin-table {
+        display: block;
+        overflow-x: auto;
+    }
+} 

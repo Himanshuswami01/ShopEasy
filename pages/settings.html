@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings - Fashion Store</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- Same header -->
+    </header>
+
+    <main class="settings-page">
+        <div class="settings-container">
+            <h1>Account Settings</h1>
+            
+            <div class="settings-section">
+                <h2>Profile Information</h2>
+                <form id="profileForm" class="settings-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone">
+                    </div>
+                    <button type="submit" class="save-btn">Save Changes</button>
+                </form>
+            </div>
+
+            <div class="settings-section">
+                <h2>Password</h2>
+                <form id="passwordForm" class="settings-form">
+                    <div class="form-group">
+                        <label for="currentPassword">Current Password</label>
+                        <input type="password" id="currentPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="newPassword">New Password</label>
+                        <input type="password" id="newPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm New Password</label>
+                        <input type="password" id="confirmPassword" required>
+                    </div>
+                    <button type="submit" class="save-btn">Update Password</button>
+                </form>
+            </div>
+
+            <div class="settings-section">
+                <h2>Preferences</h2>
+                <form id="preferencesForm" class="settings-form">
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="emailNotifications">
+                        <label for="emailNotifications">Email notifications for orders and updates</label>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="smsNotifications">
+                        <label for="smsNotifications">SMS notifications for delivery updates</label>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="newsletter">
+                        <label for="newsletter">Subscribe to newsletter</label>
+                    </div>
+                    <button type="submit" class="save-btn">Save Preferences</button>
+                </form>
+            </div>
+
+            <div class="settings-section danger-zone">
+                <h2>Account Management</h2>
+                <button class="delete-account-btn" onclick="confirmDeleteAccount()">
+                    Delete Account
+                </button>
+                <p class="warning-text">This action cannot be undone.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+
+    <script type="module" src="../js/settings.js"></script>
+</body>
+</html> 
